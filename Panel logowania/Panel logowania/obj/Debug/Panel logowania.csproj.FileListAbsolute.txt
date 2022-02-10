@@ -1,0 +1,10 @@
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\bin\Debug\Panel logowania.exe.config
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\bin\Debug\Panel logowania.exe
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\bin\Debug\Panel logowania.pdb
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel logowania.csprojAssemblyReference.cache
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel_logowania.Form1.resources
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel_logowania.Properties.Resources.resources
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel logowania.csproj.GenerateResource.cache
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel logowania.exe
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel logowania.pdb
+C:\Users\Adam\source\repos\Panel logowania\Panel logowania\obj\Debug\Panel_logowania.Form2.resources
