@@ -7,19 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Panel_logowania
 {
     public partial class Form2 : Form
     {
+        private string server;
+        private string database;
+        private string uid;
+        private string passwd;
+
         public Form2()
         {
             InitializeComponent();
         }
 
+        void pobierzDane()
+        {
+            try
+            {
+                server = "localhost";
+                database = "mydb";
+                uid = "root";
+                passwd = "admin";
+
+                MySqlConnection conn = new MySqlConnection("SERVER=" + server + ";DATABASE=" + database + ";UID=" + uid + ";PASSWORD=" + passwd + ";");
+                MySqlCommand command = new MySqlCommand("SELECT * FROM uzytkownicy", conn);
+
+                conn.Open();
+
+                MySqlDataAdapter adap = new MySqlDataAdapter(command);
+                DataSet ds = new DataSet();
+                adap.Fill(ds);
+
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                string b1 = string.Format("Błąd połączenia z bazą danych", ex.Message);
+                MessageBox.Show(b1, "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            pobierzDane();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -42,6 +77,13 @@ namespace Panel_logowania
             {
                 button2.Enabled = true;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
         }
     }
 }
